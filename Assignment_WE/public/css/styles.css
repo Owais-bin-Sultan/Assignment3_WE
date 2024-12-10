@@ -1,0 +1,185 @@
+:root {
+    --primary: #000;
+    --secondary: #949494;
+    --tertiary: rgba(255, 255, 255, 0.1);
+    --tertiary-2: rgba(0, 0, 0, 0.2);
+    --tertiary-3: rgba(0, 0, 0, 0.4);
+    --tertiary-4: rgba(0, 0, 0, 0.5);
+    --nav-text-color: white;
+    --heading-font: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+main {
+    flex-grow: 1;
+    font-family: var(--heading-font);
+}
+
+.home-animation {
+    margin-top: 10vh;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-self: center;
+    margin: auto;
+    background-color: var(--secondary);
+    box-shadow: 0 0 50px var(--secondary);
+    border: 4px solid var(--primary);
+}
+
+.testimonials {
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--nav-text-color);
+}
+
+.testimonials iframe {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border: none;
+}
+
+.testimonials h2 {
+    font-size: 40px;
+    margin-bottom: 35px;
+}
+
+.testimonials-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    justify-content: center;
+}
+
+.card {
+    background-color: var(--tertiary);
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 600px;
+    border: 5px solid var(--buttons-color);
+    box-shadow: 0 4px 8px var(--tertiary-2);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05) translateY(-10px);
+    box-shadow: 0 8px 16px var(--tertiary-3);
+}
+
+.image {
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+}
+
+.text-container {
+    padding: 20px;
+    background: var(--tertiary-4);
+    color: var(--nav-text-color);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+
+.text {
+    font-size: 18px;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+.name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: right;
+}
+
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 10px auto 40px;
+}
+
+.button {
+    background-color: #bb6226;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.button:hover {
+    background-color: #e65c00;
+    transform: scale(1.05);
+}
+
+
+.button:active {
+    transform: scale(1);
+}
+
+.button:focus {
+    outline: 3px solid #ff9900;
+    outline-offset: 2px;
+}
+
+@media screen and (max-width:1024px) {
+    .home-animation {
+        margin-top: 20vh;
+        width: 100vh;
+    }
+}
+
+@media screen and (max-height:800px) {
+    .home-animation {
+        margin-top: 10vh;
+        width: 100vw;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .home-animation {
+        margin-top: 0;
+    }
+
+    .button {
+        padding: 12px 20px;
+        font-size: 12px;
+
+    }
+
+}
+@media screen and (max-width:430px) {
+    .testimonials-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .buttons-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+}

@@ -1,0 +1,190 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #333;
+  }
+  
+  main {
+    flex-grow: 1;
+    margin-top: 10vh;
+    font-family: var(--heading-font);
+  }
+  
+  #dynamic-list-section h2, #dynamic-list-section h3 {
+    color: #1d1d1d;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+  
+  #dynamic-list-section p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #555;
+  }
+  
+  /* Header/Footer styles */
+  #header-placeholder, #footer-placeholder {
+    background-color: #4CAF50;
+    height: 60px;
+  }
+  
+  /* Service Section */
+  #dynamic-list-section {
+    width: 80%;
+    margin: 7vh auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  #service-selector {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  #dynamic-list-section label {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  #dynamic-list-section select, #dynamic-list-section input[type="date"], #dynamic-list-section input[type="time"] {
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+  }
+  
+  #dynamic-list-section select:focus, #dynamic-list-section input[type="date"]:focus, #dynamic-list-section input[type="time"]:focus {
+    border-color: #cec2ba;
+    outline: none;
+  }
+  
+  #dynamic-list-section button {
+    background-color: #f3c81e;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  #dynamic-list-section button:hover {
+    background-color: #b9970d;
+  }
+  
+  #dynamic-list-section button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Services List */
+  ul#services-list {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  ul#services-list li {
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Form for User Details */
+  #user-details {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  
+  #user-details input {
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+  }
+  
+  #user-details button {
+    background-color: #f3c81e;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+  }
+  
+  #user-details button:hover {
+    background-color: #b9970d;
+  }
+  
+  /* Error/Success Message */
+  /* Styling for the message container */
+#message-container {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#message-container p {
+  margin: 0;
+}
+
+/* Red message for errors */
+#message-container p.error {
+  color: red;
+}
+
+/* Green message for success */
+#message-container p.success {
+  color: green;
+}
+
+  @media (max-width: 768px) {
+    #dynamic-list-section {
+        width: 90%;
+        padding: 15px;
+    }
+  
+    #dynamic-list-section h2, #dynamic-list-section h3 {
+        font-size: 1.6rem;
+    }
+  
+    #dynamic-list-section select, #dynamic-list-section input[type="date"], input[type="time"] {
+        width: 100%;
+    }
+  
+    #dynamic-list-section button {
+        padding: 10px 15px;
+    }
+  }
+  
+  @media screen and (max-width:1024px) {
+    main {
+      margin-top: 10vh;
+    }
+  }
+  @media screen and (max-width:770px) {
+    main {
+      margin-top: 60vh;
+    }
+  }
+  

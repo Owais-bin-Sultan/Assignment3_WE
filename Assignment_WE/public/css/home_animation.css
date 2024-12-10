@@ -1,0 +1,158 @@
+.banner {
+    margin-top: -50px;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner h1 {
+    position: absolute;
+    top: 20%;
+    left: 12%;
+    color: #ebe7e1;
+    text-shadow: 0 0 10px #2e2721;
+
+}
+
+.product {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 170px;
+    z-index: 2;
+    width: 500px;
+    transition: 0.7s;
+}
+
+.product .globe {
+    position: absolute;
+    bottom: 0;
+    left: calc(50%);
+    transform: translateX(-50%);
+}
+
+.globe {
+    --left: 0px;
+    background:
+        var(--url) var(--left),
+        url(../images/globe.png) 0 0;
+    background-size: auto 100%;
+    width: 280px;
+    aspect-ratio: 1 / 1;
+    background-blend-mode: multiply;
+    transition: 0.8s;
+    mask-image: url(../images/globe.png);
+    mask-size: auto 100%;
+}
+
+.globe:nth-child(2) {
+    opacity: 0;
+}
+
+.product:hover {
+    bottom: 300px;
+}
+
+.product:hover .globe:nth-child(2) {
+    opacity: 1;
+    --left: 400px;
+}
+
+.product:hover .globe:nth-child(1) {
+    opacity: 0;
+    --left: 500px;
+}
+
+.product-background {
+    position: absolute;
+    inset: 0 0 0 0;
+    width: 100%;
+    pointer-events: none;
+}
+
+.product-background img:nth-child(1) {
+    position: absolute;
+    height: 170px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30px;
+    transition: 0.7s;
+    z-index: 1;
+}
+
+.product-background img:nth-child(2) {
+    position: absolute;
+    height: 50%;
+    left: 0;
+    bottom: 0;
+    transition: 0.7s;
+}
+
+.product-background img:nth-child(3) {
+    position: absolute;
+    height: 100%;
+    right: 0;
+    bottom: -100px;
+    rotate: -25deg;
+    transition: 0.7s;
+}
+
+.banner:has(.product:hover) .product-background img:nth-child(1) {
+    transform: translateX(-50%) translateY(50px);
+}
+
+.banner:has(.product:hover) .product-background img:nth-child(2) {
+    transform: translateX(-100px) translateY(100px);
+}
+
+.banner:has(.product:hover) .product-background img:nth-child(3) {
+    transform: translateX(100px) translateY(100px);
+}
+
+
+@media screen and (max-width: 1600px) {
+    .banner h1 {
+        left: 0%;
+    }
+}
+@media screen and (max-width: 1270px) {
+    .banner h1 {
+        width: 300px;
+        line-height: 2;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .globe {
+        width: 400px;
+    }
+
+    .product:hover .globe:nth-child(2) {
+        --left: 500px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .banner h1{
+        top: 5%;
+    }
+    .globe {
+        width: 250px;
+    }
+
+    .product:hover .globe:nth-child(2) {
+        --left: 500px;
+    }
+
+    header img {
+        display: none;
+    }
+}
+
+@media  screen and (max-width: 430px) {
+    .banner h1{
+        line-height: 1;
+        width: max-content;
+        font-size: 5vw;
+    }
+}

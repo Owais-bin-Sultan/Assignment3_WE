@@ -1,0 +1,377 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    color: white;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Flexbox layout for main content */
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-top: 10vh;
+}
+
+/* Styling for the iframe */
+main iframe {
+    width: 100%;
+    height: 500px;
+    margin-bottom: 20px;
+    border: none;
+    outline: none;
+}
+
+/* Services Info container */
+.services-info {
+    width: 80%;
+    margin-top: 30px;
+}
+
+/* Section headers */
+.services-info h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #ffcc00; /* Gold color for section titles */
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Section paragraphs */
+.services-info p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Tables for service details */
+.services-info table {
+    width: 100%;
+    margin-bottom: 40px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.services-info th, .services-info td {
+    padding: 12px;
+    border: 1px solid #666;
+}
+
+.services-info th {
+    background-color: #333;
+    color: #ffcc00;
+    text-transform: uppercase;
+}
+
+.services-info td {
+    background-color: #222;
+}
+
+.services-info td:nth-child(2) {
+    color: #ffcc00;
+}
+
+/* Pricing and Schedule paragraphs */
+.services-info p strong {
+    color: #ffcc00;
+    font-size: 1.2em;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1024px) {
+    .services-info {
+        width: 90%;
+    }
+    .section{
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    main iframe {
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-info {
+        width: 95%;
+    }
+    .section{
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    main iframe {
+        height: 300px;
+    }
+
+    .services-info h2 {
+        font-size: 1.8em;
+    }
+
+    .services-info p {
+        font-size: 1em;
+    }
+
+    .services-info table {
+        font-size: 0.9em;
+    }
+}
+
+/* General styles for larger screens */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  iframe {
+    width: 100%;
+    height: 400px;
+  }
+  
+  /* Responsive tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    body {
+      font-size: 16px;
+    }
+  
+    iframe {
+      height: 300px;
+    }
+  
+    th, td {
+      font-size: 14px;
+      padding: 8px;
+    }
+    
+    table {
+      font-size: 14px;
+      margin: 15px 0;
+    }
+  
+    section h2 {
+      font-size: 1.5rem;
+    }
+  
+    section p {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    body {
+      font-size: 14px;
+    }
+  
+    iframe {
+      height: 250px;
+    }
+  
+    th, td {
+      font-size: 12px;
+      padding: 6px;
+    }
+    
+    table {
+      font-size: 12px;
+    }
+  
+    section h2 {
+      font-size: 1.25rem;
+    }
+  
+    section p {
+      font-size: 0.9rem;
+    }
+    
+    .services-info {
+      padding: 0 10px;
+    }
+  }
+
+  .section-div{
+    display: none;
+  }
+
+
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+  body {
+      background:  url('../images/starry-background.jpg') no-repeat center center/cover;
+      object-fit:fill;
+      overflow-y: auto;
+      margin: 0;
+      padding: 0;
+      background-color: #282c34;
+      color: white;
+      font-family: Arial, sans-serif;
+  }
+  .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      padding: 20px;
+  }
+  .item {
+      background: rgba(0, 0, 0, 0.8);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      position: relative;
+      transition: transform 0.3s;
+      height: 300px;
+  }
+  .item:hover {
+      transform: translateY(-5px); 
+  }
+  .item img {
+      width: 100%; 
+      height: 100%; 
+      object-fit: cover; 
+      display: block; 
+  }
+  .content {
+      position: absolute;
+      bottom: 0;
+      left: 0; 
+      right: 0; 
+      background: rgba(0, 0, 0, 0.6); 
+      padding: 15px;
+  }
+  .name {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+  }
+  .des {
+      margin: 10px 0;
+      font-size: 14px;
+      color: #d3d3d3; 
+  }
+  button {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: #007BFF;
+      color: white;
+      transition: background-color 0.3s;
+  }
+  button:hover {
+      background-color: #0056b3;
+  }
+  .hero {
+  position: relative;
+  background-image: url('your-hero-image.jpg'); /* Replace with your image */
+  background-size: cover;
+  background-position: center;
+  height: 400px; /* Adjust height as needed */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 3rem; /* Adjust as needed */
+  margin: 0;
+}
+
+.hero p {
+  font-size: 1.5rem; /* Adjust as needed */
+  margin: 10px 0;
+}
+
+.hero .cta-button {
+  background-color: rgba(255, 165, 0, 0.8); /* Example color */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.hero .cta-button:hover {
+  background-color: rgba(255, 165, 0, 1);
+}
+
+  @media (max-width: 800px) {
+      .container {
+          grid-template-columns: 1fr; /* Single column on small screens */
+      }
+      .item {
+          height: 50vh;
+      }
+      .item img {
+          height: auto; 
+      }
+  }
+
+
+.section{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.section-button{
+  background-color: transparent;
+  border: none;
+  padding: 5px;
+  height: fit-content;
+  font-size: large;
+}
+
+.section-button:hover{
+  background-color: rgba(100, 100, 0, 0.5);
+  border: 1px solid white;
+}
